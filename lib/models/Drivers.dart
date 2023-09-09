@@ -1,9 +1,9 @@
-class drivers {
+class Drivers {
   MRData? mRData;
 
-  drivers({this.mRData});
+  Drivers({this.mRData});
 
-  drivers.fromJson(Map<String, dynamic> json) {
+  Drivers.fromJson(Map<String, dynamic> json) {
     mRData =
         json['MRData'] != null ? new MRData.fromJson(json['MRData']) : null;
   }

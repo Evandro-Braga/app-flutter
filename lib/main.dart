@@ -1,8 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_app/views/MyHomePage.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_app/pages/home_page.dart';
 
 void main() {
   runApp(const MainApp());
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(systemNavigationBarColor: Colors.black87));
 }
 
 class MainApp extends StatelessWidget {
@@ -10,6 +14,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: MyHomePage());
+    return MaterialApp(theme: ThemeData.dark(), home: const HomePage());
   }
 }
